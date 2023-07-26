@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'nav-bg': '#F85559',
+                'deal-description': 'rgba(18, 18, 18, 0.60)',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+    <header>
+        <nav class="p-4">
+            <div class="flex flex-row lg:justify-between items-center bg-nav-bg px-6 rounded-full h-20">
+                <div>
+                    <ul class="flex gap-4 p-4 text-white">
+                        <li>Home</li>
+                        <li>About Us</li>
+                        <li>Shop</li>
+                        <li>All Fruits</li>
+                    </ul>
+                </div>
+                <div class="flex items-center gap-4">
+                    <img src="./images/logo.png" alt="">
+                    <h1 class="text-4xl font-bold text-white">Fruit Burst</h1>
+                </div>
+                <div>
+                    <label for="" >
+                        <input class="lg:h-12 w-60 rounded-full form-control " type="text" name="" id="" placeholder="Search">
+                    </label>
+                </div>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>

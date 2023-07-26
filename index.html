@@ -33,9 +33,10 @@
     </style>
 </head>
 <body class="lato-fonts">
-    <header>
-        <nav class="p-4 px-10">
-            <div class="navbar bg-nav-bg rounded-full justify-between items-center">
+    <header class="hidden">
+        <nav class="lg:p-4 px-10">
+            <div class="navbar lg:bg-nav-bg lg:rounded-full
+            justify-between items-center">
                 <div>
                     <ul class="flex gap-4 p-4 text-white">
                         <li>Home</li>
@@ -46,18 +47,40 @@
                 </div>
                 <div class="">
                     <img class="h-12" src="./images/logo.png" alt="">
-                  <a class="btn btn-ghost normal-case text-4xl font-bold text-white">Fruit Burst</a>
+                  <a class="btn btn-ghost normal-case text-4xl font-bold text-black lg:text-white">Fruit Burst</a>
                 </div>
                 <div class="px-8">
                   <div class="form-control py-4">
                     <input type="text" placeholder="Search" class="relative input input-bordered rounded-full h-10 w-60"/>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute mt-4 " fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                   </div>
                 </div>
               </div>
         </nav>
+        <!-- another nav -->
+        <nav class="p-4">
+            <div class="flex flex-row lg:justify-between items-center bg-nav-bg px-6 rounded-full h-20">
+                <div>
+                    <ul class="flex gap-4 p-4 text-white">
+                        <li>Home</li>
+                        <li>About Us</li>
+                        <li>Shop</li>
+                        <li>All Fruits</li>
+                    </ul>
+                </div>
+                <div class="flex items-center gap-4">
+                    <img class="h-12" src="./images/logo.png" alt="">
+                    <h1 class="text-4xl font-bold text-white">Fruit Burst</h1>
+                </div>
+                <div>
+                    <label for="" >
+                        <input class="h-10 w-60 rounded-full form-control px-4 bg-primary" type="text" name="" id="" placeholder="Search">
+                    </label>
+                </div>
+            </div>
+        </nav>
+
         <section>
-            <div class="carousel w-full relative hidden">
+            <div class="carousel w-full relative">
                 <div class="absolute">
                     <h1>
                         Exotic tastes at your doorstep
@@ -96,13 +119,14 @@
             </div>
         </section>
     </header>
-    <main>
+    <main class="">
         <!-- Deal of the day -->
         <section>
-            <div class="flex px-10 items-center pt-8">
+            <div class="flex flex-col lg:flex-row text-center lg:text-left px-4  lg:px-10 items-center pt-20">
                 <div class="space-y-5">
-                    <h1 class="text-4xl	font-extrabold">Deal of the day</h1>
-                    <p class="font-medium w-4/5 text-deal-description	">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                    <h1 class="text-4xl	font-extrabold ">Deal of the day</h1>
+                    <p class="font-medium lg:w-4/5 text-deal-description pb-4
+                	">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
                 </div>
                 <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
                     <div class="flex flex-col">
@@ -132,7 +156,7 @@
                 </div>
             </div>
 
-            <div class="grid gap-8 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 px-20 pt-14 ">
+            <div class="grid gap-8 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 px-4 lg:px-20 pt-14">
                 <!-- card 1 -->
                 <div class="card bg-base-100 shadow-xl">
                     <figure><img src="/images/fruit6.png" alt="Shoes" /></figure>
@@ -206,8 +230,93 @@
                     </div>
                   </div>
             </div>
-            <div>
-                <button class="bg-error px-8 py-4 rounded-2xl my-8 ">Shop Now</button>
+            <div class="flex justify-center pt-14">
+                <button class="px-8 py-4 rounded-2xl my-8 text-white text-base font-bold bg-nav-bg ">Shop Now</button>
+            </div>
+        </section>
+
+        <!-- Meat the team -->
+        <section>
+            <div class="hero h-auto lg:h-[600px] mt-10" style="background-image: url(./images/team.png);">
+                <div class="hero-overlay bg-opacity-80"></div>
+                <div class="hero-content text-center text-neutral-content flex flex-col">
+                  <div class="">
+                    <h1 class="mb-5 text-4xl font-bold text-white">Meet the team section</h1>
+                    <p class="mb-5 lg:w-[615px] font-light">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                  </div>
+                  <div class="flex flex-col lg:flex-row gap-20">
+                    <div class="space-y-3">
+                        <img class="pl-3" src="images/member1.png" alt="">
+                        <h3 class="text-2xl	font-bold">Awlad Hossain</h3>
+                        <p>Fruits Expert</p>
+                        <div class="flex justify-center gap-2">
+                            <img src="icons/facebook.png" alt="">
+                            <img src="icons//twitter.png" alt="">
+                            <img src="icons/linkedin.png" alt="">
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <img class="pl-3" src="images/member2.png" alt="">
+                        <h3 class="text-2xl	font-bold">Safia Chowdhury</h3>
+                        <p>Fruits Expert</p>
+                        <div class="flex justify-center gap-2">
+                            <img src="icons/facebook.png" alt="">
+                            <img src="icons//twitter.png" alt="">
+                            <img src="icons/linkedin.png" alt="">
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <img class="pl-3" src="images/member3.png" alt="">
+                        <h3 class="text-2xl	font-bold">Rokib Hossain</h3>
+                        <p>Fruits Expert</p>
+                        <div class="flex justify-center gap-2">
+                            <img src="icons/facebook.png" alt="">
+                            <img src="icons//twitter.png" alt="">
+                            <img src="icons/linkedin.png" alt="">
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <img class="pl-3" src="images/member4.png" alt="">
+                        <h3 class="text-2xl	font-bold">Chaity</h3>
+                        <p>Fruits Expert</p>
+                        <div class="flex justify-center gap-2">
+                            <img src="icons/facebook.png" alt="">
+                            <img src="icons//twitter.png" alt="">
+                            <img src="icons/linkedin.png" alt="">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why chose us -->
+        <section>
+            <div class="my-10  text-center space-y-4 ">
+                <h1 class="text-4xl font-bold text-black">Why Choose Us</h1>
+                <p class="font-medium text-base	text-deal-description ">
+                    Contrary to popular belief, is not simply random text. It has roots in a piece  of classical Latin literature from 45 BC, making it over 2000 years old.
+                </p>
+            </div>
+            <div class="flex">
+                <div class="flex items-center gap-6 p-6">
+                    <div><img class="" src="icons/group1.png" alt=""></div>
+                    <div class="space-y-2">
+                        <h4 class="text-xl font-bold">Dedicated Team</h4>
+                        <hr class=" bg-deal-description">
+                        <p class="text-deal-description">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="images/whychoose1.png" alt="">
+                </div>
+                <div class="flex items-center gap-6 p-6">
+                    <div class="space-y-2 text-right">
+                        <h4 class="text-xl font-bold">Dedicated Team</h4>
+                        <hr class="bg-deal-description">
+                        <p class="text-deal-description">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                    </div>
+                    <div><img class="" src="icons/group1.png" alt=""></div>
+                </div>
             </div>
         </section>
     </main>
